@@ -16,9 +16,7 @@
  *  09. home
  *  10. about
  *  11. skills
- *  12. credentials
  *  13. portfolio
- *  14. stats
  *  15. contact
  *  16. footer
  *
@@ -115,6 +113,10 @@ body {
 	color: #353535;
 	margin: 0;
 	padding: 0;
+}
+
+body.lg-on {
+    overflow: hidden;
 }
 
 /* ------------------------------------------------------------------- 
@@ -1864,25 +1866,43 @@ header .header-logo a {
 	padding-right: 20px;
 }
 
+#about h1 {
+	margin-bottom: 1.5em;
+}
+
 .intro-title {
 	float: left;
-	margin: 0 20px;
+	margin-right: 100px;
+}
+
+.intro-title::after {
+	content: "";
+	display: block;
+	clear: both;
 }
 
 .intro-cv a {
 	font-family: 'S-CoreDream-3Light';
 }
 
-.intro-detail {
+.intro-details {
 	float: left;
-	width: 70%;
-	margin-bottom: 20px;
+	margin-right: 100px;
 }
 
-.intro-detail-icon {
+.intro-detail {
+	margin-bottom: 50px;
+}
+
+.intro-detail::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.intro-detail-image {
 	float: left;
 	width: 100px;
-	height: 100px;
 	margin-right: 20px;
 }
 
@@ -1894,6 +1914,23 @@ header .header-logo a {
 .intro-detail-text h4 {
 	font-family: 'S-CoreDream-3Light';
 	font-style: italic;
+	margin-bottom: 10px;
+}
+
+.intro-educations {
+	float: left;
+}
+
+.intro-educations::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.intro-educations h2
+, .intro-educations .period
+, .intro-educations .education {
+	font-family: 'S-CoreDream-3Light';
 }
 
 .intro::after {
@@ -2020,7 +2057,7 @@ header .header-logo a {
 	color: #7c3b08;
 }
 
-#skills .section-intro h1 {
+#skills h1 {
 	color: #FFFFFF;
 }
 
@@ -2078,151 +2115,6 @@ header .header-logo a {
 
 }
 
-/* ===================================================================
- *  12. credentials - (_layout.scss)
- *
- * ------------------------------------------------------------------- */
-#credentials {
-	background: #FFFFFF;
-	position: relative;
-	padding: 12rem 0 9rem;
-}
-
-#credentials .credentials-content h2 {
-	margin-bottom: 4.8rem;
-	color: #4C2405;
-	padding-left: 8rem;
-	font-size: 1.8rem;
-	text-transform: uppercase;
-	letter-spacing: .15rem;
-	position: relative;
-}
-
-#credentials .credentials-content h2::before {
-	display: block;
-	content: "";
-	height: 3px;
-	width: 4rem;
-	background-color: #aeaeae;
-	position: absolute;
-	top: 50%;
-	left: 2rem;
-	margin-top: -3px;
-}
-
-#credentials .left {
-	padding-right: 40px;
-}
-
-#credentials .right {
-	padding-left: 40px;
-}
-
-#credentials .timeline-wrap {
-	position: relative;
-	text-align: left;
-}
-
-#credentials .timeline-wrap::before {
-	content: "";
-	display: block;
-	width: 1px;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.1);
-	position: absolute;
-	left: 2rem;
-	top: 0;
-}
-
-#credentials .timeline-block {
-	position: relative;
-	padding-left: 8rem;
-	margin-bottom: 4.2rem;
-}
-
-#credentials .timeline-ico {
-	height: 4.8rem;
-	width: 4.8rem;
-	line-height: 4.8rem;
-	background: #4C2405;
-	border-radius: 50%;
-	text-align: center;
-	color: #FFFFFF;
-	position: absolute;
-	left: 2rem;
-	top: 0;
-	margin-left: -2.4rem;
-}
-
-#credentials .timeline-header .timeframe {
-	font-family: "montserrat-regular", sans-serif;
-	font-size: 1.6rem;
-	color: #757575;
-	margin-bottom: 0;
-}
-
-#credentials .timeline-header h3 {
-	font-size: 2.4rem;
-	line-height: 1.25;
-	margin-bottom: 0;
-}
-
-/* ------------------------------------------------------------------- 
- * responsive:
- * credentials
- * ------------------------------------------------------------------- */
-@media only screen and (max-width:1024px) {
-	#credentials .left {
-		padding-right: 20px;
-	}
-
-	#credentials .right {
-		padding-left: 20px;
-	}
-
-}
-
-@media only screen and (max-width:768px) {
-	#credentials .credentials-content h2 {
-		padding: 0;
-		text-align: center;
-	}
-
-	#credentials .credentials-content h2::before {
-		display: none;
-	}
-
-	#credentials .left {
-		padding-right: 10px;
-	}
-
-	#credentials .right {
-		padding-left: 10px;
-	}
-
-}
-
-@media only screen and (max-width:600px) {
-	#credentials .timeline-block {
-		padding-left: 7rem;
-	}
-
-}
-
-@media only screen and (max-width:400px) {
-	#credentials .timeline-header .timeframe {
-		font-size: 1.5rem;
-	}
-
-	#credentials .timeline-header h3 {
-		font-size: 2.2rem;
-	}
-
-	#credentials .timeline-block {
-		padding-left: 6rem;
-	}
-
-}
 
 /* ===================================================================
  *  13. portfolio - (_layout.scss)
@@ -2334,15 +2226,15 @@ header .header-logo a {
 }
 
 .bricks-wrapper .item-wrap .item-text .folio-title {
+	font-family: 'S-CoreDream-3Light';
 	color: #FFFFFF;
 	font-size: 2.2rem;
 	line-height: 1.364;
 }
 
 .bricks-wrapper .item-wrap .item-text .folio-types {
-	font-family: "montserrat-regular", sans-serif;
+	font-family: 'S-CoreDream-3Light';
 	font-size: 1.2rem;
-	text-transform: uppercase;
 	letter-spacing: .1rem;
 	color: rgba(255, 255, 255, 0.7);
 }
@@ -2476,79 +2368,6 @@ header .header-logo a {
 	#portfolio .bricks-wrapper .brick {
 		float: none;
 		width: 100%;
-	}
-
-}
-
-
-/* ===================================================================
- *  14. stats - (_layout.scss)
- *
- * ------------------------------------------------------------------- */
-#stats {
-	background-color: #111111;
-	position: relative;
-	padding: 6rem 0 6rem;
-}
-
-#stats .stat {
-	text-align: center;
-	border-right: 1px solid rgba(255, 255, 255, 0.04);
-}
-
-#stats .stat:last-child {
-	border: none;
-}
-
-#stats .stat .icon-part {
-	color: #333;
-}
-
-#stats .stat .icon-part i {
-	font-size: 6rem;
-}
-
-#stats .stat h5 {
-	color: #FFFFFF;
-	margin-top: 1.5rem;
-	font-size: 1.4rem;
-}
-
-#stats .stat h3 {
-	color: #7c3b08;
-	font-size: 4.8rem;
-	text-transform: uppercase;
-	letter-spacing: .2rem;
-	margin: 1.5rem 0 0 0;
-	padding-top: 1.5rem;
-	line-height: 1;
-	font-family: "montserrat-bold", sans-serif;
-	position: relative;
-	text-align: center;
-}
-
-#stats .stat h3::before {
-	content: "";
-	display: inline-block;
-	width: 80px;
-	height: 3px;
-	background-color: rgba(5, 100, 139, 0.1);
-	background-color: rgba(255, 255, 255, 0.1);
-	text-align: center;
-	position: absolute;
-	top: 0;
-	left: 50%;
-	margin-left: -40px;
-}
-
-/* ------------------------------------------------------------------- 
- * responsive:
- * stats
- * ------------------------------------------------------------------- */
-@media only screen and (max-width:768px) {
-	#stats .stat:nth-child(n) {
-		border: none;
-		padding-bottom: 2.4rem;
 	}
 
 }
@@ -2867,43 +2686,6 @@ header .header-logo a {
  *  16. footer - (_layout.scss)
  *
  * ------------------------------------------------------------------- */
-footer {
-	padding-top: 4.2rem;
-	padding-bottom: 4.2rem;
-	text-align: center;
-	font-family: "montserrat-regular", sans-serif;
-	font-size: 1.6rem;
-	position: relative;
-}
-
-footer .footer-social {
-	list-style: none;
-	display: inline-block;
-	margin-left: 0;
-	margin-bottom: 9rem;
-}
-
-footer .footer-social li {
-	display: inline-block;
-	padding-left: 0;
-	margin: 0 8px 1.5rem 8px;
-	font-family: "montserrat-bold", sans-serif;
-	font-size: 1.8rem;
-}
-
-footer .footer-social li a,
-footer .footer-social li a:visited {
-	color: rgba(255, 255, 255, 0.5);
-}
-
-footer .footer-social li a:hover,
-footer .footer-social li a:focus {
-	color: #FFFFFF;
-}
-
-footer .footer-social li:last-child {
-	margin-right: 0;
-}
 
 #go-top {
 	position: fixed;
