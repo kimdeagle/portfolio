@@ -76,40 +76,40 @@
 		var menuTrigger = $('#header-menu-trigger');
 		var menuIcon = $('#header-menu-trigger .header-menu-icon');
 
+		
 		$WIN.on('scroll', function() {
+			console.log($WIN.scrollTop());
 			if ($WIN.height() == 969) {
-				if ($WIN.scrollTop() > 900 && $WIN.scrollTop() < 2096) {				
+				if ($WIN.scrollTop() < 910) {
+					menuTrigger.removeClass('black');
+					menuIcon.removeClass('black');
+				} else if ($WIN.scrollTop() > 910 && $WIN.scrollTop() < 1650) {				
 					menuTrigger.addClass('black');
 					menuIcon.addClass('black');
 	
-				} else if ($WIN.scrollTop() > 2096 && $WIN.scrollTop() < 3091) {
+				} else if ($WIN.scrollTop() > 1650 && $WIN.scrollTop() < 3040) {
 					menuTrigger.removeClass('black');
 					menuIcon.removeClass('black');
 				}
-				else if ($WIN.scrollTop() > 3091 && $WIN.scrollTop() < 7100) {
+				else if ($WIN.scrollTop() > 3040) {
 					menuTrigger.addClass('black');
 					menuIcon.addClass('black');
-	
-				} else {
-					menuTrigger.removeClass('black');
-					menuIcon.removeClass('black');				
 				}
 			} else {
-				if ($WIN.scrollTop() > 755 && $WIN.scrollTop() < 2255) {				
+				if ($WIN.scrollTop() < 755) {
+					menuTrigger.removeClass('black');
+					menuIcon.removeClass('black');
+				} else if ($WIN.scrollTop() > 755 && $WIN.scrollTop() < 2130) {				
 					menuTrigger.addClass('black');
 					menuIcon.addClass('black');
 	
-				} else if ($WIN.scrollTop() > 2255 && $WIN.scrollTop() < 3210) {
+				} else if ($WIN.scrollTop() > 2130 && $WIN.scrollTop() < 3430) {
 					menuTrigger.removeClass('black');
 					menuIcon.removeClass('black');
 				}
-				else if ($WIN.scrollTop() > 3210 && $WIN.scrollTop() < 6805) {
+				else if ($WIN.scrollTop() > 3430) {
 					menuTrigger.addClass('black');
 					menuIcon.addClass('black');
-	
-				} else {
-					menuTrigger.removeClass('black');
-					menuIcon.removeClass('black');				
 				}
 			}
 
@@ -294,53 +294,7 @@
 	     	} 
 		}); 
 
-	};
-
-
-  /* Contact Form
-   * ------------------------------------------------------ */
-   var ssContactForm = function() {   	
-
-   	/* local validation */   	
-		$('#contactForm').validate({
-
-			/* submit via ajax */
-			submitHandler: function(form) {				
-				var sLoader = $('#submit-loader');			
-
-				$.ajax({   	
-			      type: "POST",
-			      url: "inc/sendEmail.php",
-			      data: $(form).serialize(),
-
-			      beforeSend: function() { 
-			      	sLoader.fadeIn(); 
-			      },
-			      success: function(msg) {
-		            // Message was sent
-		            if (msg == 'OK') {
-		            	sLoader.fadeOut(); 
-		               $('#message-warning').hide();
-		               $('#contactForm').fadeOut();
-		               $('#message-success').fadeIn();   
-		            }
-		            // There was an error
-		            else {
-		            	sLoader.fadeOut(); 
-		               $('#message-warning').html(msg);
-			            $('#message-warning').fadeIn();
-		            }
-			      },
-			      error: function() {
-			      	sLoader.fadeOut(); 
-			      	$('#message-warning').html("Something went wrong. Please try again.");
-			         $('#message-warning').fadeIn();
-			      }
-		      });    		
-	  		}
-
-		});
-   };	
+	};	
 
  
   /* Back to Top
@@ -380,8 +334,7 @@
 		ssStatCounter();
 		ssAlertBoxes();
 		ssAnimations();
-		ssIntroAnimation();		
-		ssContactForm();
+		ssIntroAnimation();
 		ssBackToTop();
 
 	})();
