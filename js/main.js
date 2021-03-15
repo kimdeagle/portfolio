@@ -295,6 +295,15 @@
 
 	};	
 
+
+	//contact link
+	$("#contact .contact-link").mouseenter(function() {
+		$(this).css("color", "#FFFFFF");
+	});
+
+	$("#contact .contact-link").mouseleave(function() {
+		$(this).css("color", "#f0a359");
+	});
  
   /* Back to Top
 	* ------------------------------------------------------ */

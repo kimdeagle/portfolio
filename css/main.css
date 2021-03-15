@@ -105,7 +105,7 @@ body {
 }
 
 body {
-	background: #050505;
+	background: #222222;
 	font-family: "librebaskerville-regular", serif;
 	font-size: 1.6rem;
 	line-height: 3rem;
@@ -1823,7 +1823,7 @@ header .header-logo a {
 #about {
 	position: relative;
 	padding: 10.8rem 0 10.8rem;
-	background-color: #FFFFFF;
+	background-color: #EEEEEE;
 	min-height: 700px;
 }
 
@@ -2120,7 +2120,7 @@ header .header-logo a {
  *
  * ------------------------------------------------------------------- */
 #portfolio {
-	background: #EBEBEB;
+	background: #EEEEEE;
 	min-height: 800px;
 	position: relative;
 	padding: 12rem 0 15rem;
@@ -2444,14 +2444,9 @@ header .header-logo a {
  *
  * ------------------------------------------------------------------- */
 
-#contact .contact-link:hover {
-	color: #FFFFFF;
-}
-
-#contact .contact-link:visited,
-#contact .contact-link:focus {
-	color: #f0a359;
-}
+ #contact {
+	 background-color: #222222;
+ }
 
 .contact-info {
 	margin: 4.8rem auto 0;
@@ -2462,20 +2457,11 @@ header .header-logo a {
 }
 
 .contact-info p {
-	color: #555;
+	color: #dddddd;
 }
 
-.contact-info .collapse {
-	padding: 0;
-}
-
-.contact-info .icon {
-	margin-bottom: 2.1rem;
-}
-
-.contact-info .icon i {
-	font-size: 4.2rem;
-	color: #FFFFFF;
+.contact-info p i {
+	color: #888888;
 }
 
 .contact-info h5 {
