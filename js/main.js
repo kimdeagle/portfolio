@@ -78,7 +78,6 @@
 
 		
 		$WIN.on('scroll', function() {
-			console.log($WIN.scrollTop());
 			if ($WIN.height() == 969) {
 				if ($WIN.scrollTop() < 910) {
 					menuTrigger.removeClass('black');
