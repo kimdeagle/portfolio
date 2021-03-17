@@ -1,37 +1,16 @@
-## Welcome to GitHub Pages
+# Juhyeok's Portfolio
 
-You can use the [editor on GitHub](https://github.com/kimdeagle/portfolio/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+<img src="images4readme/logo.png">
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+https://kimdeagle.github.io/portfolio
 
-### Markdown
+### 김주혁 웹 포트폴리오 사이트입니다.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+**👏피드백은 언제나 환영입니다!**
 
-```markdown
-Syntax highlighted code block
+### Contact
+👤 김주혁 Juhyeok Kim
 
-# Header 1
-## Header 2
-### Header 3
+📞 +82 10-6534-3159
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kimdeagle/portfolio/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+✉ juhyeok.dev@gmail.com
