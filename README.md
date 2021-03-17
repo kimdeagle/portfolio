@@ -1,6 +1,8 @@
 # Juhyeok's Portfolio
 
-<a href="http://kimdeagle.github.io/portfolio" target="_blank"><img src="images4readme/logo.png"></a>
+<img src="images4readme/logo.png">
+
+<http://kimdeagle.github.io/portfolio>
 
 ### 김주혁 웹 포트폴리오 사이트입니다.
 
