@@ -1,8 +1,6 @@
 # Juhyeok's Portfolio
 
-<img src="images4readme/logo.png">
-
-https://kimdeagle.github.io/portfolio
+<a href="http://kimdeagle.github.io/portfolio" target="_blank"><img src="images4readme/logo.png"></a>
 
 ### 김주혁 웹 포트폴리오 사이트입니다.
 
@@ -13,4 +11,4 @@ https://kimdeagle.github.io/portfolio
 
 📞 +82 10-6534-3159
 
-✉ juhyeok.dev@gmail.com
+✉ <juhyeok.dev@gmail.com>
