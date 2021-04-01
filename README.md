@@ -1,6 +1,6 @@
 # Juhyeok's Portfolio
 
-<img src="images4readme/logo.png">
+![image](https://user-images.githubusercontent.com/20657250/113284969-58ee0900-9325-11eb-9794-8cf6dfe788f2.png)
 
 <http://kimdeagle.github.io/portfolio>
 
